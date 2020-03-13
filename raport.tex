@@ -1,0 +1,174 @@
+\documentclass{article}
+
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[hyphens]{url}
+\usepackage{authblk}
+\usepackage{tabularx}
+\usepackage[a4paper, left=2cm, right=2cm, top=3cm, bottom=3cm]{geometry}
+\usepackage{listings}
+\usepackage{placeins}
+\usepackage{hyperref}
+\usepackage{biblatex}
+\usepackage{amssymb}
+\addbibresource{references.bib}
+
+\usepackage[tablegrid,owncaptions]{vhistory}
+\renewcommand{\vhhistoryname}{Historia zmian}
+\renewcommand{\vhversionname}{Wersja}
+\renewcommand{\vhdatename}   {Data}
+\renewcommand{\vhauthorname} {Autor}
+\renewcommand{\vhchangename} {Opis zmian}
+
+\renewcommand\figurename{Rys.}
+\renewcommand\lstlistingname{Wydruk}
+%
+
+%------------------------------------------------------------------------
+\title{{\Huge  Projekt Systemy Cyfrowe}\\ {\Large Zespół nr 1} }
+
+\author{Dominik Grzybowski \and  Krzysztof Zdulski \and Michał Wawrzyńczak \and Paweł Gryka \and Bartek Walusiak}
+
+\affil{Politechnika Warszawska, Wydział Elektroniki i Technik Informacyjnych}
+\date{\today}
+
+%------------------------------------------------------------------------
+\begin{document}
+	
+\maketitle
+%------------------------------------------------------------------------
+% Historia zmian
+\begin{versionhistory}
+	\vhEntry{1.0}{13.03.2020}{DG|KZ|MW|PG|BW}{Pierwsza wersja raportu Etapu 1}
+\end{versionhistory}
+
+%------------------------------------------------------------------------
+
+\tableofcontents
+
+%------------------------------------------------------------------------
+\section{Wstęp}
+\label{sec:wstep}
+
+
+Otrzymano wiadomość od tajnego agenta, z której wynika, że zdobył on ważne informacje. Niestety, wiadomość jest uszkodzona i najprawdopodobniej niepełna.
+
+\begin{quote}
+\texttt{I gained important information. For lack of time and possibilities, I encoded pdf files using tea exactly according to what Wiki says. I send the package by a trusted courier, so it will take time. In Caesar's way, the password for the cipher is Narq oy zn ...... }
+\end{quote}
+
+Zgodnie z tą wiadomością materiały w postaci zakodowanych plików w formacie 
+PDF zostały zakodowane prawdopodobnie prostym algorytmem i wysłane bezpiecznym
+kanałem. Powinny one wkrótce dotrzeć.
+Klucz do szyfru jest niepełny i wygląda na zakodowany.\\
+ 
+Powierzone nam zadanie, to zaprojektowanie i zrealizowanie układu FPGA, które umożliwi odszyfrowanie przesłanych plików
+
+
+\section{Organizacja prac}
+\label{sec:organizacja}
+
+
+
+\subsection{Design Thinking}
+\label{sec:design_thinking}
+
+\subsubsection{Empathize}
+\label{sec:empathize}
+
+Żeby jak najlepiej zrozumieć potrzeby użytkownika jeden z członków zespołu
+postawił się w jego roli, a reszta zadawała pytania 
+co do jego oczekiwań w stosunku do planowanego rozwiązania. 
+
+\subsubsection{Define}
+\label{sec:define}
+
+Na podstawie przeprowadzonego wywiadu sformułowaliśmy listę potrzeb użytkownika:
+
+\begin{itemize}
+    \item Szybkość działania systemu jest kluczowa - HYDRA atakuje :o
+    \item Użytkownikowi zależy na szybkim współdzieleniu zdekodowanego pliku z telefonem
+    \item Nieważna jest mobilność rozwiązania - odbierany plik będzie przetwarzany w bazie S.H.I.E.L.D.
+    \item Nie ma potrzeby szyfrowania kanału transmisji - sam plik jest już na wstępie zaszyfrowany
+    \item Łatwość w użytkowaniu (GUI)
+\end{itemize}
+
+\subsubsection{Ideate}
+\label{sec:ideate}
+
+Zgodnie z założeniami tego punktu, wygenerowaliśmy wiele pomysłów:
+
+\begin{itemize}
+    \item Maszyna deszyfrująca znajduje się w satelicie i komunikujemy się z nią poprzez teleportację elektronów
+    \item Jak wyżej ale komunikacja laserem
+    \item Program w C + web interface
+    \item Wynająć 100 zdolnych matematyków, którzy będą odszyfrowywali wiadomości na kartce
+    \item Wytresować stado małp, które będą odszyfrowywały wiadomości
+    \item Realizacja sprzętowa na FPGA + interface w Pythonie
+    \item Poproszenie agenta, żeby nie szyfrował przesyłanych wiadomości (najszybsza opcja)
+\end{itemize}
+
+Analizując wygenerowane pomysły, stwierdziliśmy, że najlepszym podejściem będzie realizacja na FPGA.
+
+\subsubsection{Prototype}
+\label{sec:prototype}
+
+TODO
+
+\subsubsection{Test}
+\label{sec:test}
+
+TODO
+
+\subsection{Zarządzanie projektem}
+\label{sec:zarządzanie_projektem}
+
+\textit{Zarządzam ja} $\sim$ Krzysztof Zdulski 2020
+
+\subsubsection{Metody}
+\label{sec:narzędzia}
+Twarda dyscyplina kurcze blaszuszka ma być
+
+\subsubsection{Narzędzia}
+\label{sec:narzędzia}
+Za nasz podstawowy zestaw narzędzi, którymi będziemy posługiwać się w trakcie realizacji projektu wybraliśmy:
+\begin{itemize}
+    \item Microsoft Teams - Zarządzanie plikami i dostarczanie sprawozdań do koordynatora
+    \item Overleaf - Edytor plików LaTeX online
+    \item Discord - Grupowa komunikacja głosowa
+    \item Quartus Prime - IDE na plażę
+    \item GitHub - słabszy odpowiednik \href{https://guthub.net/}{GutHub}
+\end{itemize}
+%------------------------------------------------------------------------
+\section{Informacje podstawowe}
+\label{sec:informacje_podstawowe}
+
+TODO
+
+%------------------------------------------------------------------------
+\section{Koncepcja}
+\label{sec:koncepcja}
+
+TODO
+
+%------------------------------------------------------------------------
+\section{Implementacja}
+\label{sec:implementacja}
+
+TODO
+
+\section{Uruchomienie}
+\label{sec:uruchomienie}
+
+TODO 
+	
+\section{Podsumowanie}
+\label{sec:podsumowanie}
+
+TODO
+
+
+\printbibliography
+	
+\end{document}
