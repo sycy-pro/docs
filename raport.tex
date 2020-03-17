@@ -12,6 +12,7 @@
 \usepackage{hyperref}
 \usepackage{biblatex}
 \usepackage{amssymb}
+\usepackage{float}
 \addbibresource{references.bib}
 
 \usepackage[tablegrid,owncaptions]{vhistory}
@@ -40,7 +41,8 @@
 %------------------------------------------------------------------------
 % Historia zmian
 \begin{versionhistory}
-	\vhEntry{1.0}{13.03.2020}{DG|KZ|MW|PG|BW}{Pierwsza wersja raportu Etapu 1}
+	\vhEntry{1.0.0}{13.03.2020}{DG|KZ|MW|PG|BW}{Pierwsza wersja raportu Etapu 1}
+	\vhEntry{1.1.0}{17.03.2020}{DG|KZ|MW|PG|BW}{Opis pierwszego prototypu, dołączenie narzędzi i podział zadań}
 \end{versionhistory}
 
 %------------------------------------------------------------------------
@@ -114,7 +116,20 @@ Analizując wygenerowane pomysły, stwierdziliśmy, że najlepszym podejściem b
 \subsubsection{Prototype}
 \label{sec:prototype}
 
-TODO
+Przygotowaliśmy multiplatformowy (\textit{Qt} framework) prototyp aplikacji realizującej zadanie.
+Posiada prosty graficzny
+interfejs użytkownika, który zapewnia łatwe dostęp do funkcjonalności systemu.
+Prototyp został napisany w języku Python, 
+aczkolwiek finalna wersja zostanie przepisana w C++ aby uzyskać maksymalną
+wydajność. 
+Oto jak wygląda:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{images/prototype.png}
+    \caption{Prototyp aplikacji}
+    \label{fig:prototype-1}
+\end{figure}
 
 \subsubsection{Test}
 \label{sec:test}
@@ -128,17 +143,24 @@ TODO
 
 \subsubsection{Metody}
 \label{sec:narzędzia}
-Twarda dyscyplina kurcze blaszuszka ma być
+
+Zadania dla członków zespołu przydzielane są na platformie Trello przez
+menadżera zespołu. 
+Obowiązuje trzy częściowy system wersjonowania plików - Major.Minor.Patch.
+Commity mają być pisane w języku angielskim oraz stosować się
+do \textbf{\href{https://chris.beams.io/posts/git-commit/}{tych zasad}}.
 
 \subsubsection{Narzędzia}
 \label{sec:narzędzia}
 Za nasz podstawowy zestaw narzędzi, którymi będziemy posługiwać się w trakcie realizacji projektu wybraliśmy:
 \begin{itemize}
-    \item Microsoft Teams - Zarządzanie plikami i dostarczanie sprawozdań do koordynatora
-    \item Overleaf - Edytor plików LaTeX online
-    \item Discord - Grupowa komunikacja głosowa
-    \item Quartus Prime - IDE na plażę
+    \item Microsoft Teams - zarządzanie plikami i dostarczanie sprawozdań do koordynatora
+    \item Overleaf - edytor plików LaTeX online
+    \item Discord - grupowa komunikacja głosowa
+    \item Quartus Prime/ModelSim - IDE na plażę
     \item GitHub - słabszy odpowiednik \href{https://guthub.net/}{GutHub}
+    \item Trello - organizacja i przydział zadań
+    \item CrypTool - narzędzie ułatwiające zrozumienie pojęć i technik stosowanych w kryptologii
 \end{itemize}
 %------------------------------------------------------------------------
 \section{Informacje podstawowe}
